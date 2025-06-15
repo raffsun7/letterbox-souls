@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LetterBox Souls</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>LetterBox Souls</h1>
+    <a href="/dashboard.html" class="dashboard-link">My Dashboard 👤</a>
+
+    <p>Loading...</p>
+
+    <form id="letter-form">
+        <h3>Share a feeling...</h3>
+        <textarea 
+            id="letter-text" 
+            placeholder="Pour your heart out..." 
+            required 
+            rows="4"></textarea>
+        <select id="mood-select">
+            <option value="hope">Hopeful 🌈</option>
+            <option value="sad">Sad 😔</option>
+            <option value="love">Lovely ❤️</option>
+            <option value="lost">Lost 🫠</option>
+            <option value="happy">Happy 😊</option>
+        </select>
+        <button type="submit">Post Anonymously</button>
+    </form>
+
+    <hr>
+
+    <div id="posts-feed">
+        <h2>Shared Feelings</h2>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+
+    <script src="app.js"></script>
+</body>
+</html>

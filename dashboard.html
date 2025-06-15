@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dashboard - LetterBox Souls</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="header">
+        <h1>My Dashboard 👤</h1>
+        <a href="/" class="home-link">← Back to Home</a>
+    </div>
+
+    <div class="dashboard-content">
+        <div id="my-posts">
+            <h2>My Letters</h2>
+            <div class="content-container" id="my-posts-container">
+                <p>Loading your letters...</p>
+            </div>
+        </div>
+        <div id="my-comments">
+            <h2>My Comments</h2>
+            <div class="content-container" id="my-comments-container">
+                <p>Loading your comments...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

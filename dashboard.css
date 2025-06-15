@@ -1,0 +1,55 @@
+body {
+    background-color: #f0f2f5;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto 20px auto;
+}
+
+a.home-link {
+    text-decoration: none;
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    color: #333;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.dashboard-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#my-posts, #my-comments {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.content-container p, .content-container div {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.content-container p:last-child, .content-container div:last-child {
+    border-bottom: none;
+}
+
+.delete-button {
+    color: red;
+    font-size: 0.8em;
+    cursor: pointer;
+    float: right;
+}

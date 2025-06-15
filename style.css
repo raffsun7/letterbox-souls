@@ -1,0 +1,116 @@
+body {
+    background-color: #f0f2f5; /* A soft, light gray background */
+    font-family: sans-serif;
+    text-align: center;
+    padding-top: 50px;
+}
+
+/* Form Styling */
+#letter-form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#letter-form h3 {
+    margin-top: 0;
+}
+
+textarea, select, button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    box-sizing: border-box; /* Important! */
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Post Feed Styling */
+#posts-feed {
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.post-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    text-align: left;
+}
+
+.post-card .mood {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.post-card .text {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.post-card .actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #777;
+    font-size: 0.9em;
+}
+
+.actions span {
+    cursor: pointer;
+}
+
+.actions span:hover {
+    text-decoration: underline;
+}
+
+/* Comments Section Styling */
+.comments-container {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+.comment {
+    background-color: #f0f2f5;
+    padding: 8px 12px;
+    border-radius: 12px;
+    font-size: 0.9em;
+    margin-bottom: 8px;
+}
+
+.comment-form {
+    display: flex;
+    margin-top: 10px;
+    gap: 8px;
+}
+
+.comment-form input {
+    flex-grow: 1; /* Allows the input to take up available space */
+    margin-bottom: 0;
+}
+
+.comment-form button {
+    width: auto; /* Overrides the default 100% width */
+    padding: 12px 15px;
+}
