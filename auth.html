@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - LetterBox Souls</title>
+    <link rel="stylesheet" href="auth.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="container" id="container">
+        <!-- Sign-Up Form Container -->
+        <div class="form-container sign-up-container">
+            <form id="register-form">
+                <h1>Create Account</h1>
+                <div class="social-icons">
+                    <a href="#" class="social-icon" id="google-register-btn"><i class='bx bxl-google'></i></a>
+                </div>
+                <span>or use your email for registration</span>
+                <div class="input-box">
+                    <input id="register-username" type="text" placeholder="Username" required />
+                </div>
+                <div class="input-box">
+                    <input id="register-email" type="email" placeholder="Email" required />
+                </div>
+                <div class="input-box">
+                    <input id="register-password" type="password" placeholder="Password (min. 6 characters)" required />
+                </div>
+                <button type="submit" class="btn">Register</button>
+                <p id="register-error" class="error-message"></p>
+            </form>
+        </div>
+
+        <!-- Sign-In Form Container -->
+        <div class="form-container sign-in-container">
+            <form id="login-form">
+                <h1>Login</h1>
+                <div class="social-icons">
+                    <a href="#" class="social-icon" id="google-login-btn"><i class='bx bxl-google'></i></a>
+                </div>
+                <span>or use your username or email</span>
+                 <div class="input-box">
+                    <input id="login-identifier" type="text" placeholder="Username or Email" required />
+                </div>
+                <div class="input-box">
+                    <input id="login-password" type="password" placeholder="Password" required />
+                </div>
+                <a href="#" id="forgot-password-link" class="forgot-link">Forgot your password?</a>
+                <button type="submit" class="btn">Login</button>
+                 <p id="login-error" class="error-message"></p>
+                 <div class="crisis-resources">
+                    <p>In crisis? <a href="#" id="show-crisis-resources">Get help here</a></p>
+                </div>
+            </form>
+        </div>
+        
+        <!-- Sliding Overlay Container -->
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p>To keep connected with us please login with your personal info</p>
+                    <button class="btn ghost" id="signInButton">Login</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Hello, Friend!</h1>
+                    <p>Enter your personal details and start your journey with us</p>
+                    <button class="btn ghost" id="signUpButton">Register</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modals -->
+    <div id="username-modal" class="modal-overlay">
+        <div class="modal-content">
+            <h2>One Last Step!</h2>
+            <p>Please choose a unique username to complete your profile.</p>
+            <form id="username-form">
+                <div class="input-box"><input type="text" id="modal-username" placeholder="Enter your username" required></div>
+                <button type="submit" class="btn">Save Username</button>
+                <p id="modal-error" class="error-message"></p>
+            </form>
+        </div>
+    </div>
+    <div id="crisis-modal" class="modal-overlay">
+        <div class="modal-content">
+            <h3>You Matter ❤️</h3>
+            <p>If you are in distress, please reach out. You are not alone.</p>
+            <ul>
+                <li>National Suicide Prevention Lifeline: <strong>988</strong></li>
+                <li>Crisis Text Line: Text <strong>HOME</strong> to 741741</li>
+            </ul>
+            <button class="btn" id="close-crisis-modal">Close</button>
+        </div>
+    </div>
+
+    <!-- Firebase SDKs and Logic -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>

@@ -1,55 +1,73 @@
-body {
-    background-color: #f0f2f5;
-    font-family: sans-serif;
-    margin: 0;
-    padding: 20px;
-}
-
-.header {
+/* Dashboard Specific Styles */
+.navbar {
+    background: var(--bg-secondary);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--glass-border);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 900px;
-    margin: 0 auto 20px auto;
 }
 
-a.home-link {
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-link {
+    color: var(--text-secondary);
     text-decoration: none;
-    background-color: white;
-    padding: 10px 15px;
-    border-radius: 8px;
-    color: #333;
-    font-weight: bold;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--text-primary);
+}
+
+.user-avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid var(--glass-border);
+    cursor: pointer;
 }
 
 .dashboard-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
+    padding: 1rem;
 }
 
-#my-posts, #my-comments {
-    background-color: white;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+#mood-chart {
+    max-height: 300px;
+    max-width: 100%;
 }
 
-.content-container p, .content-container div {
-    padding: 10px;
-    border-bottom: 1px solid #eee;
+.empty-message {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-secondary);
 }
 
-.content-container p:last-child, .content-container div:last-child {
-    border-bottom: none;
-}
-
-.delete-button {
-    color: red;
-    font-size: 0.8em;
-    cursor: pointer;
-    float: right;
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    .navbar-links {
+        width: 100%;
+        justify-content: space-between;
+    }
 }

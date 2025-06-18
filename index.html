@@ -4,42 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LetterBox Souls</title>
-    
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <h1>LetterBox Souls</h1>
-    <a href="/dashboard.html" class="dashboard-link">My Dashboard 👤</a>
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo"><a href="/"><i class="fa-solid fa-feather-pointed"></i><span>LetterBox Souls</span></a></div>
+            <nav class="main-nav">
+                <a href="#feed" class="nav-link active" data-target="feed"><i class="fa-solid fa-house"></i><span>Feed</span></a>
+                <a href="#create" class="nav-link" data-target="create"><i class="fa-solid fa-pen-to-square"></i><span>Create</span></a>
+                <a href="#dashboard" class="nav-link" data-target="dashboard"><i class="fa-solid fa-user"></i><span>Me</span></a>
+            </nav>
+            <div class="user-profile-section" id="user-profile-section">
+                <a href="/auth.html" id="auth-link">Login</a>
+            </div>
+        </div>
+    </header>
 
-    <p>Loading...</p>
+    <main class="content-wrapper">
+        <section id="feed" class="page-section active">
+            <div id="posts-feed">
+                <div class="loading-spinner">
+                    <div class="spinner"></div>
+                    <p>Loading anonymous feelings...</p>
+                </div>
+            </div>
+        </section>
 
-    <form id="letter-form">
-        <h3>Share a feeling...</h3>
-        <textarea 
-            id="letter-text" 
-            placeholder="Pour your heart out..." 
-            required 
-            rows="4"></textarea>
-        <select id="mood-select">
-            <option value="hope">Hopeful 🌈</option>
-            <option value="sad">Sad 😔</option>
-            <option value="love">Lovely ❤️</option>
-            <option value="lost">Lost 🫠</option>
-            <option value="happy">Happy 😊</option>
-        </select>
-        <button type="submit">Post Anonymously</button>
-    </form>
+        <section id="create" class="page-section">
+            <form id="letter-form">
+                <h3>Share a new feeling...</h3>
+                <textarea id="letter-text" placeholder="Pour your heart out..." required maxlength="500"></textarea>
+                <select id="mood-select">
+                    <option value="hope">Hopeful 🌈</option>
+                    <option value="sad">Sad 😔</option>
+                    <option value="love">Lovely ❤️</option>
+                    <option value="lost">Lost 🫠</option>
+                    <option value="happy">Happy 😊</option>
+                </select>
+                <button type="submit">Post Anonymously</button>
+            </form>
+        </section>
 
-    <hr>
+        <section id="dashboard" class="page-section">
+            <div class="dashboard-grid">
+                <div id="mood-analytics" class="dashboard-card">
+                    <h2>Your Mood Journey</h2>
+                    <canvas id="mood-chart"></canvas>
+                </div>
+                <div id="flower-history" class="dashboard-card">
+                    <h2>Flowers Received</h2>
+                    <div class="flower-grid" id="flower-container"></div>
+                </div>
+            </div>
+            <div id="my-posts" class="dashboard-card">
+                <h2>Your Letters</h2>
+                <div class="content-container" id="my-posts-container"></div>
+            </div>
+            <div id="my-comments" class="dashboard-card">
+                <h2>Your Kind Words</h2>
+                <div class="content-container" id="my-comments-container"></div>
+            </div>
+        </section>
+    </main>
 
-    <div id="posts-feed">
-        <h2>Shared Feelings</h2>
-    </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
-
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-storage-compat.js"></script>
+    
+    <script src="audio-recorder.js"></script>
     <script src="app.js"></script>
 </body>
 </html>

@@ -4,14 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Dashboard - LetterBox Souls</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="dashboard.css">
 </head>
 <body>
-    <div class="header">
-        <h1>My Dashboard 👤</h1>
-        <a href="/" class="home-link">← Back to Home</a>
-    </div>
-
+    <nav class="navbar">
+        <div class="navbar-brand">LetterBox Souls ✨</div>
+        <div class="navbar-links">
+          <a href="/" class="nav-link">Home</a>
+          <a href="/dashboard.html" class="nav-link active">Dashboard</a>
+          <a href="#" class="nav-link">Explore</a>
+          <a href="#" class="nav-link">Notifications</a>
+          <div class="user-avatar">
+            <img src="https://i.pravatar.cc/40?u=a042581f4e29026704d" alt="User" id="user-avatar">
+          </div>
+        </div>
+    </nav>
+    
     <div class="dashboard-content">
         <div id="my-posts">
             <h2>My Letters</h2>
@@ -27,10 +38,12 @@
         </div>
     </div>
 
+    <!-- Firebase SDKs -->
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
 
+    <!-- Dashboard Logic -->
     <script src="dashboard.js"></script>
 </body>
 </html>
